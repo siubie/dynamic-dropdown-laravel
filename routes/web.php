@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\KotaController;
+use App\Http\Controllers\ProvinsiController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,3 +18,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::resource('provinsi', ProvinsiController::class);
+Route::resource('kota', KotaController::class);
