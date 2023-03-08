@@ -15,6 +15,6 @@ class ProvinsiSeeder extends Seeder
     {
         //
         Provinsi::create(['nama' => 'Jawa Barat']);
-        Provinsi::create(['nama' => 'Jawa Jawa Timur']);
+        Provinsi::create(['nama' => 'Jawa Timur']);
     }
 }

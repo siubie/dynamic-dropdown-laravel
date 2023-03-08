@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\StoreKotaRequest;
 use App\Http\Requests\UpdateKotaRequest;
 use App\Models\Kota;
+use App\Models\Provinsi;
 
 class KotaController extends Controller
 {
@@ -14,7 +15,8 @@ class KotaController extends Controller
     public function index()
     {
         //
-        dd(Kota::all());
+        $provinsi = Provinsi::all();
+        return response()->view('kota.index', compact('provinsi'));
     }
 
     /**
