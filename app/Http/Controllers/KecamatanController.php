@@ -2,13 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\StoreKotaRequest;
-use App\Http\Requests\UpdateKotaRequest;
+use App\Http\Requests\StoreKecamatanRequest;
+use App\Http\Requests\UpdateKecamatanRequest;
 use App\Models\Kecamatan;
-use App\Models\Kota;
-use App\Models\Provinsi;
 
-class KotaController extends Controller
+class KecamatanController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,10 +14,6 @@ class KotaController extends Controller
     public function index()
     {
         //
-        $provinsi = Provinsi::all();
-        $kota = Kota::all();
-        $kecamatan = Kecamatan::all();
-        return response()->view('kota.index', compact('provinsi', 'kota', 'kecamatan'));
     }
 
     /**
@@ -33,7 +27,7 @@ class KotaController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(StoreKotaRequest $request)
+    public function store(StoreKecamatanRequest $request)
     {
         //
     }
@@ -41,7 +35,7 @@ class KotaController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Kota $kota)
+    public function show(Kecamatan $kecamatan)
     {
         //
     }
@@ -49,7 +43,7 @@ class KotaController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Kota $kota)
+    public function edit(Kecamatan $kecamatan)
     {
         //
     }
@@ -57,7 +51,7 @@ class KotaController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdateKotaRequest $request, Kota $kota)
+    public function update(UpdateKecamatanRequest $request, Kecamatan $kecamatan)
     {
         //
     }
@@ -65,7 +59,7 @@ class KotaController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Kota $kota)
+    public function destroy(Kecamatan $kecamatan)
     {
         //
     }

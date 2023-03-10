@@ -23,9 +23,27 @@
             <div class="col">
                 <div class="mb-3">
                     <label for="exampleFormControlInput1" class="form-label">Provinsi</label>
-                    <select class="form-select" id="single-select-field" data-placeholder="Choose one thing">
+                    <select name="provinsi" class="form-select single-select-field" data-placeholder="Pilih Provinsi">
                         <option></option>
                         @foreach ($provinsi as $item)
+                            <option>{{ $item->nama }}</option>
+                        @endforeach
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Kota</label>
+                    <select name="kota" class="form-select single-select-field" data-placeholder="Pilih Kota">
+                        <option></option>
+                        @foreach ($kota as $item)
+                            <option>{{ $item->nama }}</option>
+                        @endforeach
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Kecamatan</label>
+                    <select name="kecamatan" class="form-select single-select-field" data-placeholder="Pilih Kecamatan">
+                        <option></option>
+                        @foreach ($kecamatan as $item)
                             <option>{{ $item->nama }}</option>
                         @endforeach
                     </select>
@@ -38,7 +56,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
     <script>
-        $('#single-select-field').select2({
+        $('.single-select-field').select2({
             theme: "bootstrap-5",
             width: $(this).data('width') ? $(this).data('width') : $(this).hasClass('w-100') ? '100%' : 'style',
             placeholder: $(this).data('placeholder'),
